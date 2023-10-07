@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tournament Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tournament Management</h1>
+
+    <!-- User Registration Form -->
+    <div id="user-form" class="hidden">
+        <h2>User Registration</h2>
+        <form id="user-registration-form" action="registerUser.php" method="post">
+            <input type="text" name="userId" placeholder="User ID" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Register User</button>
+        </form>
+    </div>
+
+    <!-- Tournament Creation Form -->
+    <div id="tournament-form" class="hidden">
+        <h2>Tournament Creation</h2>
+        <form id="tournament-creation-form" action="createTournament.php" method="post">
+            <input type="text" name="tournamentId" placeholder="Tournament ID" required>
+            <input type="text" name="name" placeholder="Tournament Name" required>
+            <input type="datetime-local" name="startTime" required>
+            <input type="datetime-local" name="endTime" required>
+            <button type="submit">Create Tournament</button>
+        </form>
+    </div>
+
+    <!-- Score Submission Form -->
+    <div id="score-form" class="hidden">
+        <h2>Score Submission</h2>
+        <form id="score-submission-form" action="submitScore.php" method="post">
+            <input type="text" name="scoreId" placeholder="Score ID" required>
+            <input type="text" name="userId" placeholder="User ID" required>
+            <input type="text" name="tournamentId" placeholder="Tournament ID" required>
+            <input type="number" name="score" placeholder="Score" required>
+            <button type="submit">Submit Score</button>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
